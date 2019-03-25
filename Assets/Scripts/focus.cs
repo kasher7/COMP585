@@ -22,6 +22,7 @@ public class focus : MonoBehaviour
         text.text = "Focused";
         //background.backgroundColor = Color.blue;
         focused = Application.isFocused;
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
 
     // Update is called once per frame
