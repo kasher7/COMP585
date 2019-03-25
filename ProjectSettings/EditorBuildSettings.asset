@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FocusTestScene.unity
     guid: ba7436af9ab77c947911e489a6bfd9e7
+  - enabled: 1
+    path: Assets/Scenes/characters.unity
+    guid: 53d6b0ef3a1bfc746a312e41f0a58181
+  - enabled: 1
+    path: Assets/Scenes/options.unity
+    guid: 23f97e2c9c73f6f41a641aa47f37829c
   m_configObjects: {}

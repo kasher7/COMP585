@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class goToScene : MonoBehaviour
+public class goToCharacter : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class goToScene : MonoBehaviour
     {
         
     }
-    public void startNextQuest(){
-        SceneManager.LoadScene("FocusTestScene");
+    public void goCharacter(){
+        SceneManager.LoadScene("characters");
     }
 }
