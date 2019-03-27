@@ -49,6 +49,9 @@ public class focus : MonoBehaviour
         {
             //Debug.Log("In Focus");
         }
+        if (text.text == "Failed") {
+            SceneManager.LoadScene("questFailed");
+        }          
     }
 
     void OnApplicationFocus(bool pauseStatus)
@@ -67,7 +70,8 @@ public class focus : MonoBehaviour
     {
         if (pauseStatus)
         {
-            text.text = "Quest Failed";
+            text.text = "Failed";
+
             // img.color = Color.red;
             //Debug.Log("Out of Focus");
         }
