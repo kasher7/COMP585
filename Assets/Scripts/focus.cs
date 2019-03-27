@@ -17,10 +17,9 @@ public class focus : MonoBehaviour
 
     void Start()
     {
-        img = background.GetComponent<Image>();
-        img.color = Color.blue;
-        text.text = "Focused";
-        //background.backgroundColor = Color.blue;
+        // img = background.GetComponent<Image>();
+        // img.color = Color.blue;
+        text.text = "In Quest";
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
@@ -56,12 +55,13 @@ public class focus : MonoBehaviour
     {
         if (pauseStatus)
         {
-            text.text = "Not Focused";
-            img.color = Color.red;
+            text.text = "Quest Failed";
+            // img.color = Color.red;
             //Debug.Log("Out of Focus");
         }
         else
         {
+            text.text = "In Quest";
             //Debug.Log("In Focus");
         }
     }
