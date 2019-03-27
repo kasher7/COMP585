@@ -12,7 +12,9 @@ public class focus : MonoBehaviour
     // Start is called before the first frame update
 
     public Text text;
+    public Text timerText;
     public GameObject background;
+    float timeleft = 10.0f;
     Image img;
 
     void Start()
@@ -20,6 +22,8 @@ public class focus : MonoBehaviour
         // img = background.GetComponent<Image>();
         // img.color = Color.blue;
         text.text = "In Quest";
+        timerText.text = timeleft + " seconds left";
+
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
@@ -27,6 +31,12 @@ public class focus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timeleft -= Time.deltaTime;
+        if(timeleft <= 0)
+        {
+            //Load complete scene
+        }
+        timerText.text = (timeleft - timeleft%1) + " seconds left";
         focused = Application.isFocused;
         if (!focused)
         {
