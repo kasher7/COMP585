@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/options.unity
     guid: 23f97e2c9c73f6f41a641aa47f37829c
+  - enabled: 1
+    path: Assets/Scenes/questCompleted.unity
+    guid: 128a87fcd70c4624a8bc1ea2f520843b
   m_configObjects: {}

@@ -580,11 +580,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Quest Type: sample
-
-    Time: 10 sec
-
-    Status: completed'
+  m_Text: Quest Failed
 --- !u!222 &559673575
 CanvasRenderer:
   m_ObjectHideFlags: 0

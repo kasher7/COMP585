@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 
 public class focus : MonoBehaviour
 {
@@ -13,9 +15,7 @@ public class focus : MonoBehaviour
 
     public Text text;
     public Text timerText;
-    public GameObject background;
     float timeleft = 10.0f;
-    Image img;
 
     void Start()
     {
@@ -35,6 +35,8 @@ public class focus : MonoBehaviour
         if(timeleft <= 0)
         {
             //Load complete scene
+            SceneManager.LoadScene("questCompleted");
+
         }
         timerText.text = (timeleft - timeleft%1) + " seconds left";
         focused = Application.isFocused;
