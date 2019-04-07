@@ -32,13 +32,13 @@ public class focus : MonoBehaviour
     void Update()
     {
         timeleft -= Time.deltaTime;
-        if(timeleft <= 0)
+        if (timeleft <= 0)
         {
             //Load complete scene
             SceneManager.LoadScene("questCompleted");
 
         }
-        timerText.text = (timeleft - timeleft%1) + " seconds left";
+        timerText.text = (timeleft - timeleft % 1) + " seconds left";
         focused = Application.isFocused;
         if (!focused)
         {
@@ -49,9 +49,10 @@ public class focus : MonoBehaviour
         {
             //Debug.Log("In Focus");
         }
-        if (text.text == "Failed") {
+        if (text.text == "Failed")
+        {
             SceneManager.LoadScene("questFailed");
-        }          
+        }
     }
 
     void OnApplicationFocus(bool pauseStatus)
