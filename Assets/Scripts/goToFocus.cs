@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class goToFocus : MonoBehaviour
 {
-   
+    public Dropdown dropDown;
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -18,9 +18,9 @@ public class goToFocus : MonoBehaviour
         
     }
     public void goQuest(){
-        print(GameObject.FindGameObjectsWithTag("timeDropdown")[0]);
-        
-        SceneManager.LoadScene("FocusTestScene");
+        int time = dropDown.value * 10 + 30;
+        Debug.Log("Time: " + time);
+
     }
 
 }
