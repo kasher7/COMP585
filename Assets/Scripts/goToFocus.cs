@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class goToFocus : MonoBehaviour
 {
-    // Start is called before the first frame update
+   
     void Start()
     {
         
@@ -18,6 +18,9 @@ public class goToFocus : MonoBehaviour
         
     }
     public void goQuest(){
+        print(GameObject.FindGameObjectsWithTag("timeDropdown")[0]);
+        
         SceneManager.LoadScene("FocusTestScene");
     }
+
 }
