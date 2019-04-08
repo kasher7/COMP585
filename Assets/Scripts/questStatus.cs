@@ -5,7 +5,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class questStatus : MonoBehaviour
-{
+{   
+    
     public Text type;
     public Text time;
 
