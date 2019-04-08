@@ -12,27 +12,49 @@ public class focus : MonoBehaviour
     //public bool Focused { get => focsused; set => focused = value; }
 
     // Start is called before the first frame update
-
+    public Text questTypes;
     public Text text;
     public Text timerText;
 
+    public GameObject background;
     float timeLeftSec = questConstants.questTime * 60;
+    float timer;
+    bool isSleep;
 
+    int fingerCount;
     void Start()
     {
         // img = background.GetComponent<Image>();
         // img.color = Color.blue;
         text.text = "In Quest";
         timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
-
+        questTypes.text = "you are on a " + questConstants.questType + " quest!";
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
+        timer = 0;
+        fingerCount = 0;
+        isSleep = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
         timeLeftSec -= Time.deltaTime;
+        timer += Time.deltaTime;
+        
+        foreach (Touch touch in Input.touches)
+        {
+            if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+            {
+                fingerCount++;
+            }
+        }
+
+        if (Input.GetMouseButtonDown(0) | fingerCount > 0){
+            timer = 0f;
+            fingerCount = 0;
+        }
         if (timeLeftSec <= 0)
         {
             //Load complete scene
@@ -50,6 +72,13 @@ public class focus : MonoBehaviour
         {
             //Debug.Log("In Focus");
         }
+        // check timeout
+        if(text.text == "In Quest" & timer > 10.0f){
+            background.SetActive(true);
+        }else{
+            background.SetActive(false);
+        }
+        // check quest failed
         if (text.text == "Failed")
         {
             SceneManager.LoadScene("questFailed");
