@@ -28,7 +28,7 @@ public class focus : MonoBehaviour
         // img.color = Color.blue;
         text.text = "In Quest";
         timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
-        questTypes.text = "you are on a " + questConstants.questType + " quest!";
+        // questTypes.text = "you are on a " + questConstants.questType + " quest!";
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         timer = 0;
