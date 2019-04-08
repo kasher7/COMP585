@@ -12,7 +12,7 @@ public class focus : MonoBehaviour
     //public bool Focused { get => focsused; set => focused = value; }
 
     // Start is called before the first frame update
-
+    public Text questTypes;
     public Text text;
     public Text timerText;
 
@@ -24,7 +24,7 @@ public class focus : MonoBehaviour
         // img.color = Color.blue;
         text.text = "In Quest";
         timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
-
+        questTypes.text = "you are on a " + questConstants.questType + " quest!";
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
     }
