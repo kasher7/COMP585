@@ -9,15 +9,15 @@ public static class questConstants
 
     public static string charClass;
 
-    public static void getQuestTime(int value){
+    public static void setQuestTime(int value){
         questTime = value;
     }
 
-    public static void getQuestType(string value){
+    public static void setQuestType(string value){
         questType = value;
     }
 
-    public static void getCharClass(string value){
+    public static void setCharClass(string value){
         charClass = value;
     }
 
