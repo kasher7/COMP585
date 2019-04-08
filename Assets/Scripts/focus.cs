@@ -39,8 +39,10 @@ public class focus : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        timeLeftSec -= Time.deltaTime;
+    {   
+        // time runs 100 times faster for testing reason
+        // change this back later
+        timeLeftSec -= Time.deltaTime * 100;
         timer += Time.deltaTime;
         
         foreach (Touch touch in Input.touches)
