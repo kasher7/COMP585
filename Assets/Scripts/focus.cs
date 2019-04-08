@@ -9,20 +9,21 @@ public class focus : MonoBehaviour
 {
     private bool focused = true;
 
-    //public bool Focused { get => focused; set => focused = value; }
+    //public bool Focused { get => focsused; set => focused = value; }
 
     // Start is called before the first frame update
 
     public Text text;
     public Text timerText;
-    float timeleft = 10.0f;
+
+    float timeLeftSec = questConstants.questTime * 60;
 
     void Start()
     {
         // img = background.GetComponent<Image>();
         // img.color = Color.blue;
         text.text = "In Quest";
-        timerText.text = timeleft + " seconds left";
+        timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
 
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
@@ -31,14 +32,14 @@ public class focus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timeleft -= Time.deltaTime;
-        if (timeleft <= 0)
+        timeLeftSec -= Time.deltaTime;
+        if (timeLeftSec <= 0)
         {
             //Load complete scene
             SceneManager.LoadScene("questCompleted");
 
         }
-        timerText.text = (timeleft - timeleft % 1) + " seconds left";
+        timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + Mathf.Round((timeLeftSec % 60)) + " seconds left";
         focused = Application.isFocused;
         if (!focused)
         {
