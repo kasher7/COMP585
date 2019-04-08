@@ -20,6 +20,7 @@ public class goToFocus : MonoBehaviour
     public void goQuest(){
         int time = dropDown.value * 10 + 30;
         Debug.Log("Time: " + time);
+        SceneManager.LoadScene("questMain");
 
     }
 

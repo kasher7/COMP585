@@ -18,6 +18,6 @@ public class goToQuest : MonoBehaviour
         
     }
     public void goQuest(){
-        SceneManager.LoadScene("questProgress");
+        SceneManager.LoadScene("questSelection");
     }
 }
