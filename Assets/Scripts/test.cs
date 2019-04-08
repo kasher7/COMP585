@@ -7,11 +7,12 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int test = 0;
-        double currentDate = System.DateTime.Now.ToOADate();
-        Debug.Log(currentDate);
-        double[] test2 = new double[5];
-        Debug.Log(test2[0]);
+        TextAsset myText = (TextAsset)Resources.Load("QuestText/test");
+        string[] textArray = myText.text.Split('#');
+        for (int i = 0; i<textArray.Length; i++)
+        {
+            Debug.Log(textArray[i]);
+        }
     }
 
     // Update is called once per frame

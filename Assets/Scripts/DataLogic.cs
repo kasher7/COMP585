@@ -19,5 +19,6 @@ public class DataLogic
         string dataAsJson = File.ReadAllText(filePath);
         myObject = JsonUtility.FromJson<DataObject>(dataAsJson);
     }
+
     
 }

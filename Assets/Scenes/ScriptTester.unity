@@ -112,7 +112,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &870120490
+--- !u!1 &1849659157
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -120,10 +120,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 870120493}
-  - component: {fileID: 870120492}
-  - component: {fileID: 870120491}
-  - component: {fileID: 870120495}
+  - component: {fileID: 1849659160}
+  - component: {fileID: 1849659159}
+  - component: {fileID: 1849659158}
+  - component: {fileID: 1849659161}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -131,21 +131,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &870120491
+--- !u!81 &1849659158
 AudioListener:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870120490}
+  m_GameObject: {fileID: 1849659157}
   m_Enabled: 1
---- !u!20 &870120492
+--- !u!20 &1849659159
 Camera:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870120490}
+  m_GameObject: {fileID: 1849659157}
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
@@ -181,13 +181,13 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!4 &870120493
+--- !u!4 &1849659160
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870120490}
+  m_GameObject: {fileID: 1849659157}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -195,15 +195,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &870120495
+--- !u!114 &1849659161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 870120490}
+  m_GameObject: {fileID: 1849659157}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c020068bd66f4f545846830ecaa17316, type: 3}
+  m_Script: {fileID: 11500000, guid: b23912b1db9b5f548a5e9e9487028604, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
