@@ -392,10 +392,10 @@ RectTransform:
   m_Father: {fileID: 789494918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 540, y: 0}
+  m_SizeDelta: {x: 1080, y: 1920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1273304314
 MonoBehaviour:
@@ -410,10 +410,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barDisplay: 0
-  pos: {x: 20, y: 40}
-  size: {x: 60, y: 20}
-  emptyTex: {fileID: 2800000, guid: 7987af9df4ada44fe92bba3a88e3f18f, type: 3}
-  fullTex: {fileID: 2800000, guid: 498cdbc10fb8f4910b17b799ee74ddb1, type: 3}
+  pos: {x: 300, y: 40}
+  size: {x: 600, y: 200}
+  emptyTex: {fileID: 2800000, guid: 522d8297083bd4d42bedb1a147385b3e, type: 3}
+  fullTex: {fileID: 0}
 --- !u!114 &1273304315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
