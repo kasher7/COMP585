@@ -28,7 +28,7 @@ public class focus : MonoBehaviour
         // img.color = Color.blue;
         text.text = "In Quest";
         timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
-        questTypes.text = "you are on a " + questConstants.questType + " quest!";
+        // questTypes.text = "you are on a " + questConstants.questType + " quest!";
         focused = Application.isFocused;
         Screen.sleepTimeout = SleepTimeout.NeverSleep;
         timer = 0;
@@ -39,8 +39,10 @@ public class focus : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        timeLeftSec -= Time.deltaTime;
+    {   
+        // time runs 100 times faster for testing reason
+        // change this back later
+        timeLeftSec -= Time.deltaTime * 100;
         timer += Time.deltaTime;
         
         foreach (Touch touch in Input.touches)
