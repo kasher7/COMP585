@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/questSelection.unity
     guid: 139f8151d06ec6c4e9269671dd45fb60
+  - enabled: 1
+    path: Assets/Scenes/questProgress.unity
+    guid: dfd13123c0efb5048b96cb43b1ecc0d0
   m_configObjects: {}
