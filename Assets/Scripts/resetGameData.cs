@@ -8,11 +8,13 @@ public class resetGameData : MonoBehaviour
     void Start()
     {
         DataObject myData = new DataObject();
+        //TODO let user pick name
         myData.PlayerName = "John Smith";
         myData.QuestLength = 30;
         myData.DayCounter = 0;
-        myData.StartDate = System.DateTime.Now.ToOADate();
-        myData.CurrentDate = System.DateTime.Now.ToOADate();
+        myData.StartDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
+        myData.CurrentDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
+        myData.LastDayPlayed = System.DateTime.Now.ToString().Split('/', ' ', ':');
         //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
         myData.DailyProgress = new double[28];
         myData.TotalEXP = 0;
