@@ -26,10 +26,10 @@ public class DataLogic
         myObject.TotalEXP = myObject.StrengthEXP + myObject.CharismaEXP + 
             myObject.IntellectEXP;
         //TODO trigger event on level up
-        myObject.PlayerLevel = myObject.TotalEXP % 100;
-        myObject.StrengthLevel = myObject.StrengthEXP % 100;
-        myObject.CharismaLevel = myObject.CharismaEXP % 100;
-        myObject.IntellectLevel = myObject.IntellectEXP % 100;
+        myObject.PlayerLevel = myObject.TotalEXP / 100;
+        myObject.StrengthLevel = myObject.StrengthEXP / 100;
+        myObject.CharismaLevel = myObject.CharismaEXP / 100;
+        myObject.IntellectLevel = myObject.IntellectEXP / 100;
 
         //Date and time stuff
         myObject.CurrentDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
