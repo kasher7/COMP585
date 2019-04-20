@@ -30,8 +30,6 @@ public class DataObject
     [SerializeField]
     private string[] currentDate;
     [SerializeField]
-    private string[] lastDayPlayed;
-    [SerializeField]
     private double[] dailyProgress;
     [SerializeField]
     private int totalEXP;

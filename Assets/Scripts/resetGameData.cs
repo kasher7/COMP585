@@ -5,16 +5,16 @@ using UnityEngine;
 public class resetGameData : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Text name;
     void Start()
     {
         DataObject myData = new DataObject();
         //TODO let user pick name
-        myData.PlayerName = "John Smith";
-        myData.QuestLength = 30;
-        myData.DayCounter = 0;
-        myData.StartDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
-        myData.CurrentDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
-        myData.LastDayPlayed = System.DateTime.Now.ToString().Split('/', ' ', ':');
+        myData.PlayerName = name.text;
+        myData.QuestLength = 28;
+        myData.StartDate = System.DateTime.Now;
+        myData.CurrentDate = System.DateTime.Now;
+        myData.DayCounter = (myData.CurrentDate - myData.StartDate).TotalDays;
         //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
         myData.DailyProgress = new double[28];
         myData.TotalEXP = 0;
