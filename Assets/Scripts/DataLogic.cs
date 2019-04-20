@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
+
 public class DataLogic
 {
     public static void SaveGameData(DataObject myObject)
@@ -18,7 +19,7 @@ public class DataLogic
         UpdateGameData(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
         string dataAsJson = File.ReadAllText(filePath);
-        myObject = JsonUtility.FromJson<DataObject>(dataAsJson);
+        JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
     }
 
     public static void UpdateGameData(DataObject myObject)
