@@ -20,7 +20,13 @@ public class DataObject
     [SerializeField]
     private System.DateTime currentDate;
     [SerializeField]
-    private double[] dailyProgress;
+    private int[] dailyCharismaEXP;
+    [SerializeField]
+    private int[] dailyStrengthEXP;
+    [SerializeField]
+    private int[] dailyIntellectEXP;
+    [SerializeField]
+    private int[] dailyTotalEXP;
     [SerializeField]
     private int totalEXP;
     [SerializeField]
@@ -40,7 +46,7 @@ public class DataObject
     [SerializeField]
     private double questAmountCompleted; //This should be equal to quest length if quest completed
     [SerializeField]
-    private bool[][] questCompleteLog;
+    private List<bool>[] questCompleteLog;
 
     //Main Trigger for first game startup
     [SerializeField]
@@ -66,7 +72,6 @@ public class DataObject
     public int DayCounter { get => dayCounter; set => dayCounter = value; }
     public System.DateTime StartDate { get => startDate; set => startDate = value; }
     public System.DateTime CurrentDate { get => currentDate; set => currentDate = value; }
-    public double[] DailyProgress { get => dailyProgress; set => dailyProgress = value; }
     public int TotalEXP { get => totalEXP; set => totalEXP = value; }
     public int PlayerLevel { get => playerLevel; set => playerLevel = value; }
     public int StrengthEXP { get => strengthEXP; set => strengthEXP = value; }
@@ -81,5 +86,9 @@ public class DataObject
     public string[] CharismaQuestLine { get => charismaQuestLine; set => charismaQuestLine = value; }
     public string[] IntellectQuestLine { get => intellectQuestLine; set => intellectQuestLine = value; }
     public string[] FailureQuestLine { get => failureQuestLine; set => failureQuestLine = value; }
-    public bool[][] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
+    public List<bool>[] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
+    public int[] DailyCharismaEXP { get => dailyCharismaEXP; set => dailyCharismaEXP = value; }
+    public int[] DailyStrengthEXP { get => dailyStrengthEXP; set => dailyStrengthEXP = value; }
+    public int[] DailyIntellectEXP { get => dailyIntellectEXP; set => dailyIntellectEXP = value; }
+    public int[] DailyTotalEXP { get => dailyTotalEXP; set => dailyTotalEXP = value; }
 }

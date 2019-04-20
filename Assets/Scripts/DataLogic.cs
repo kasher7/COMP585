@@ -34,6 +34,10 @@ public class DataLogic
         myObject.StrengthLevel = myObject.StrengthEXP / 100;
         myObject.CharismaLevel = myObject.CharismaEXP / 100;
         myObject.IntellectLevel = myObject.IntellectEXP / 100;
+     
+        myObject.DailyTotalEXP[myObject.DayCounter] = myObject.DailyStrengthEXP[myObject.DayCounter] + 
+            myObject.DailyIntellectEXP[myObject.DayCounter] + 
+            myObject.DailyCharismaEXP[myObject.DayCounter];
 
         //Date and time stuff
         myObject.CurrentDate = System.DateTime.Now;

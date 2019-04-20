@@ -24,7 +24,6 @@ public class resetGameData : MonoBehaviour
             myData.CurrentDate = System.DateTime.Now;
             myData.DayCounter = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
             //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
-            myData.DailyProgress = new double[28];
             myData.TotalEXP = 0;
             myData.PlayerLevel = 0;
             myData.StrengthEXP = 0;
@@ -34,7 +33,14 @@ public class resetGameData : MonoBehaviour
             myData.CharismaLevel = 0;
             myData.IntellectLevel = 0;
             myData.QuestAmountCompleted = 0;
-            myData.QuestCompleteLog = new bool[28][];
+            //TODO initialize all to false?
+            myData.QuestCompleteLog = new List<bool>[28];
+
+            //TODO initialize all to zero?
+            myData.DailyCharismaEXP = new int[28];
+            myData.DailyStrengthEXP = new int[28];
+            myData.DailyIntellectEXP = new int[28];
+            myData.DailyTotalEXP = new int[28];
             //Initialize first time playing trigger to true
             //make sure to change to false after intializing game
 
