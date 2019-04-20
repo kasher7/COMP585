@@ -39,6 +39,8 @@ public class DataObject
     private int intellectLevel;
     [SerializeField]
     private double questAmountCompleted; //This should be equal to quest length if quest completed
+    [SerializeField]
+    private bool[][] questCompleteLog;
 
     //Main Trigger for first game startup
     [SerializeField]
@@ -79,5 +81,5 @@ public class DataObject
     public string[] CharismaQuestLine { get => charismaQuestLine; set => charismaQuestLine = value; }
     public string[] IntellectQuestLine { get => intellectQuestLine; set => intellectQuestLine = value; }
     public string[] FailureQuestLine { get => failureQuestLine; set => failureQuestLine = value; }
-
+    public bool[][] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
 }
