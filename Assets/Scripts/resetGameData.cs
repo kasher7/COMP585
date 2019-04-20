@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -38,9 +39,13 @@ public class resetGameData : MonoBehaviour
 
             //TODO initialize all to zero?
             myData.DailyCharismaEXP = new int[28];
+            Array.Clear(myData.DailyCharismaEXP,0,myData.DailyCharismaEXP.Length);
             myData.DailyStrengthEXP = new int[28];
+            Array.Clear(myData.DailyStrengthEXP,0,myData.DailyStrengthEXP.Length);
             myData.DailyIntellectEXP = new int[28];
+            Array.Clear(myData.DailyIntellectEXP,0,myData.DailyIntellectEXP.Length);
             myData.DailyTotalEXP = new int[28];
+            Array.Clear(myData.DailyTotalEXP,0,myData.DailyTotalEXP.Length);
             //Initialize first time playing trigger to true
             //make sure to change to false after intializing game
 

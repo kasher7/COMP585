@@ -21,7 +21,7 @@ public class questStatus : MonoBehaviour
         int expGained = questConstants.questTime * 20;
         type.text = "Quest Type: " + questConstants.questType;
         time.text = "Time Spent: " + questConstants.questTime;
-        exp.text =  "Exp gained" + expGained;
+        exp.text =  "Exp gained: " + expGained;
         //Data update logic
         DataObject myData = new DataObject();
         DataLogic.LoadGameData(myData);
@@ -37,7 +37,7 @@ public class questStatus : MonoBehaviour
             myData.TotalEXP += expGained;
         }
 
-        myData.QuestCompleteLog[myData.DayCounter];
+        myData.QuestCompleteLog[myData.DayCounter].Add(true);
         DataLogic.SaveGameData(myData);
         status.text = "Quest completed";
     }
