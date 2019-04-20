@@ -19,7 +19,6 @@ public class DataLogic
 
     public static void LoadGameData(DataObject myObject)
     {
-        UpdateGameData(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
         string dataAsJson = File.ReadAllText(filePath);
         JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
