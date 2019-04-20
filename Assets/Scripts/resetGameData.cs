@@ -9,8 +9,11 @@ public class resetGameData : MonoBehaviour
     // Start is called before the first frame update
     public InputField name;
     public DataObject myData = new DataObject();
+    
     void Start()
     {
+        DataLogic.LoadGameData(myData);
+        Debug.Log(myData.FirstTimePlaying);
         name.text = "Enter name here...";
         if (myData.FirstTimePlaying)
         {
@@ -69,6 +72,11 @@ public class resetGameData : MonoBehaviour
         myData.FirstTimePlaying = false;
         DataLogic.SaveGameData(myData);
         SceneManager.LoadScene("menu");
+    }
+
+    public void resetGame()
+    {
+        myData.FirstTimePlaying = true;
     }
 
 
