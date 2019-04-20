@@ -32,7 +32,7 @@ public class DataLogic
         myObject.IntellectLevel = myObject.IntellectEXP / 100;
 
         //Date and time stuff
-        myObject.CurrentDate = System.DateTime.Now.ToString().Split('/', ' ', ':');
+        myObject.CurrentDate = System.DateTime.Now;
 
 
 
