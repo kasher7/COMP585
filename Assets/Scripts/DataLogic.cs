@@ -4,10 +4,13 @@ using UnityEngine;
 using System.IO;
 
 
+//Data Manipulation order
+
 public class DataLogic
 {
     public static void SaveGameData(DataObject myObject)
     {
+        UpdateGameData(myObject);
         string dataAsJson = JsonUtility.ToJson(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
         Debug.Log(dataAsJson);
@@ -34,6 +37,7 @@ public class DataLogic
 
         //Date and time stuff
         myObject.CurrentDate = System.DateTime.Now;
+        myObject.DayCounter = System.Convert.ToInt32((myObject.CurrentDate - myObject.StartDate).TotalDays);
 
 
 
