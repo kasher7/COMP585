@@ -7,14 +7,15 @@ using UnityEngine.SceneManagement;
 public class resetGameData : MonoBehaviour
 {
     // Start is called before the first frame update
-    public InputField name = null;
+    public InputField name;
     public DataObject myData = new DataObject();
     void Start()
     {
+        name.text = "Enter name here...";
         if (myData.FirstTimePlaying)
         {
             //TODO let user pick name
-            myData.PlayerName = "";
+            myData.PlayerName = name.text;
             myData.QuestLength = 28;
             myData.StartDate = System.DateTime.Now;
             myData.CurrentDate = System.DateTime.Now;
@@ -46,10 +47,11 @@ public class resetGameData : MonoBehaviour
 
 
 
-            DataLogic.SaveGameData(myData);
+            
         }
         else
         {
+            Debug.Log("loading");
             SceneManager.LoadScene("menu");
         }
         
@@ -63,7 +65,9 @@ public class resetGameData : MonoBehaviour
     public void submit()
     {
         myData.PlayerName = name.text;
+        Debug.Log(name.text);
         myData.FirstTimePlaying = false;
+        DataLogic.SaveGameData(myData);
         SceneManager.LoadScene("menu");
     }
 
