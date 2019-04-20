@@ -27,11 +27,17 @@ public class questStatus : MonoBehaviour
         DataLogic.LoadGameData(myData);
         if (questConstants.questType == "Strength"){
             myData.StrengthEXP +=expGained;
+            myData.TotalEXP += expGained;
         }else if (questConstants.questType == "Charisma"){
             myData.CharismaEXP +=expGained;
+            myData.TotalEXP += expGained;
+
         } else if (questConstants.questType == "Intelligence"){
             myData.IntellectEXP +=expGained;
+            myData.TotalEXP += expGained;
         }
+
+        myData.QuestCompleteLog[myData.DayCounter];
         DataLogic.SaveGameData(myData);
         status.text = "Quest completed";
     }
