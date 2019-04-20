@@ -34,6 +34,7 @@ public class resetGameData : MonoBehaviour
             myData.CharismaLevel = 0;
             myData.IntellectLevel = 0;
             myData.QuestAmountCompleted = 0;
+            myData.QuestCompleteLog = new bool[28][];
             //Initialize first time playing trigger to true
             //make sure to change to false after intializing game
 
