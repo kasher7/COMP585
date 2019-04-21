@@ -14,7 +14,7 @@ public class DataLogic
         string dataAsJson = JsonUtility.ToJson(myObject);
         string questLogAsJson = JsonHelper.ToJson(myObject.QuestCompleteLog, true);
         string filePath = Application.dataPath + "/Data/Data.json";
-        string questLogPath = Application.dataPath + "Data/QuestLogData.json";
+        string questLogPath = Application.dataPath + "/Data/QuestLogData.json";
         Debug.Log(dataAsJson);
         File.WriteAllText(filePath, dataAsJson);
         File.WriteAllText(questLogPath, questLogAsJson);
@@ -23,7 +23,7 @@ public class DataLogic
     public static void LoadGameData(DataObject myObject)
     {
         string filePath = Application.dataPath + "/Data/Data.json";
-        string questLogPath = Application.dataPath + "Data/QuestLogData.json";
+        string questLogPath = Application.dataPath + "/Data/QuestLogData.json";
 
         string dataAsJson = File.ReadAllText(filePath);
         string questLogAsJson = File.ReadAllText(questLogPath);
