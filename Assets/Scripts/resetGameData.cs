@@ -36,6 +36,10 @@ public class resetGameData : MonoBehaviour
             myData.QuestAmountCompleted = 0;
             //TODO initialize all to false?
             myData.QuestCompleteLog = new List<bool>[28];
+            // myData.QuestCompleteLog[0].Add(true);
+            // myData.QuestCompleteLog[1].Add(false);
+            Debug.Log("quest log");
+            Debug.Log(myData.QuestCompleteLog);
 
             //TODO initialize all to zero?
             myData.DailyCharismaEXP = new int[28];
