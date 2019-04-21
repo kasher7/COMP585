@@ -25,6 +25,7 @@ public class resetGameData : MonoBehaviour
             myData.StartDate = System.DateTime.Now;
             myData.CurrentDate = System.DateTime.Now;
             myData.DayCounter = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
+            myData.LastDayPlayed = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
             //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
             myData.TotalEXP = 0;
             myData.PlayerLevel = 0;
@@ -35,7 +36,22 @@ public class resetGameData : MonoBehaviour
             myData.CharismaLevel = 0;
             myData.IntellectLevel = 0;
             myData.QuestAmountCompleted = 0;
-            //TODO initialize all to false?
+
+            //initialize everything in questcompletelog to false
+            myData.QuestCompleteLog = new bool[28, 100];
+            //TODO gross, but I had to hardcode in the number for this, should
+            //fix so is always equal to first dimension of quest complete log later
+            for (int i = 0; i< 28; i++)
+            {
+                //TODO gross, but I had to hardcode in the number for this, should
+                //fix so is always equal to second dimension of quest complete log later
+                for (int j = 0; j < 100; j++)
+                {
+                    myData.QuestCompleteLog[i, j] = false;
+                }
+            }
+            myData.DailyQuestCounter = 0;
+
            
             Debug.Log("quest log");
             Debug.Log(myData.QuestCompleteLog);

@@ -37,7 +37,8 @@ public class questStatus : MonoBehaviour
             myData.TotalEXP += expGained;
         }
 
-        myData.QuestCompleteLog[myData.DayCounter].Add(true);
+        myData.QuestCompleteLog[myData.DayCounter,myData.DailyQuestCounter] = true;
+        myData.DailyQuestCounter += 1;
         Debug.Log(myData.QuestCompleteLog);
         DataLogic.SaveGameData(myData);
         status.text = "Quest completed";

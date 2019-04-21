@@ -14,6 +14,8 @@ public class DataObject
     private int questLength; //total quest length in minutes
     [SerializeField]
     private int dayCounter;
+    [SerializeField]
+    private int lastDayPlayed;
 
 
     [SerializeField]
@@ -47,7 +49,9 @@ public class DataObject
     [SerializeField]
     private double questAmountCompleted; //This should be equal to quest length if quest completed
     [SerializeField]
-    private List<bool>[] questCompleteLog;
+    private bool[,] questCompleteLog;
+    [SerializeField]
+    private int dailyQuestCounter;
 
     //Main Trigger for first game startup
     [SerializeField]
@@ -87,9 +91,11 @@ public class DataObject
     public string[] CharismaQuestLine { get => charismaQuestLine; set => charismaQuestLine = value; }
     public string[] IntellectQuestLine { get => intellectQuestLine; set => intellectQuestLine = value; }
     public string[] FailureQuestLine { get => failureQuestLine; set => failureQuestLine = value; }
-    public List<bool>[] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
+    public bool[,] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
     public int[] DailyCharismaEXP { get => dailyCharismaEXP; set => dailyCharismaEXP = value; }
     public int[] DailyStrengthEXP { get => dailyStrengthEXP; set => dailyStrengthEXP = value; }
     public int[] DailyIntellectEXP { get => dailyIntellectEXP; set => dailyIntellectEXP = value; }
     public int[] DailyTotalEXP { get => dailyTotalEXP; set => dailyTotalEXP = value; }
+    public int DailyQuestCounter { get => dailyQuestCounter; set => dailyQuestCounter = value; }
+    public int LastDayPlayed { get => lastDayPlayed; set => lastDayPlayed = value; }
 }

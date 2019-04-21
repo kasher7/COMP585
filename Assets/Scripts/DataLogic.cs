@@ -42,6 +42,13 @@ public class DataLogic
         //Date and time stuff
         myObject.CurrentDate = System.DateTime.Now;
         myObject.DayCounter = System.Convert.ToInt32((myObject.CurrentDate - myObject.StartDate).TotalDays);
+        if(myObject.DayCounter != myObject.LastDayPlayed)
+        {
+            Debug.Log("New Day");
+            myObject.DailyQuestCounter = 0;
+        }
+        myObject.LastDayPlayed = System.Convert.ToInt32((myObject.CurrentDate - myObject.StartDate).TotalDays);
+
 
 
 
