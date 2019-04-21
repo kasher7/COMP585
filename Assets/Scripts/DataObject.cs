@@ -49,7 +49,7 @@ public class DataObject
     [SerializeField]
     private double questAmountCompleted; //This should be equal to quest length if quest completed
     [SerializeField]
-    private bool[,] questCompleteLog;
+    private bool[] questCompleteLog;
     [SerializeField]
     private int dailyQuestCounter;
 
@@ -91,7 +91,7 @@ public class DataObject
     public string[] CharismaQuestLine { get => charismaQuestLine; set => charismaQuestLine = value; }
     public string[] IntellectQuestLine { get => intellectQuestLine; set => intellectQuestLine = value; }
     public string[] FailureQuestLine { get => failureQuestLine; set => failureQuestLine = value; }
-    public bool[,] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
+    public bool[] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
     public int[] DailyCharismaEXP { get => dailyCharismaEXP; set => dailyCharismaEXP = value; }
     public int[] DailyStrengthEXP { get => dailyStrengthEXP; set => dailyStrengthEXP = value; }
     public int[] DailyIntellectEXP { get => dailyIntellectEXP; set => dailyIntellectEXP = value; }
