@@ -41,9 +41,9 @@ public class resetGameData : MonoBehaviour
             myData.QuestCompleteLog = new bool[2800];
             //TODO gross, but I had to hardcode in the number for this, should
             //fix so is always equal to first dimension of quest complete log later
-            for (int i = 0; i< myData.DailyQuestCounter.Length; i++)
+            for (int i = 0; i< myData.QuestCompleteLog.Length; i++)
             {
-                myData.DailyQuestCounter[i] = false;
+                myData.QuestCompleteLog[i] = false;
             }
             myData.DailyQuestCounter = 0;
 
