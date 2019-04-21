@@ -28,16 +28,19 @@ public class questStatus : MonoBehaviour
         if (questConstants.questType == "Strength"){
             myData.StrengthEXP +=expGained;
             myData.TotalEXP += expGained;
+            myData.DailyStrengthEXP[myData.DayCounter] += expGained;
         }else if (questConstants.questType == "Charisma"){
             myData.CharismaEXP +=expGained;
             myData.TotalEXP += expGained;
-
+            myData.DailyCharismaEXP[myData.DayCounter] += expGained;
         } else if (questConstants.questType == "Intelligence"){
             myData.IntellectEXP +=expGained;
             myData.TotalEXP += expGained;
+            myData.DailyIntellectEXP[myData.DayCounter] += expGained;
         }
-
-        myData.QuestCompleteLog[myData.DayCounter,myData.DailyQuestCounter] = true;
+        //Dont go over the max index length
+        //it a temp solution
+        myData.QuestCompleteLog[myData.DayCounter*100 + myData.DailyQuestCounter] = true;
         myData.DailyQuestCounter += 1;
         Debug.Log(myData.QuestCompleteLog);
         DataLogic.SaveGameData(myData);
@@ -50,3 +53,5 @@ public class questStatus : MonoBehaviour
         
     }
 }
+
+
