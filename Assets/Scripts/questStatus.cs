@@ -38,6 +38,7 @@ public class questStatus : MonoBehaviour
         }
 
         myData.QuestCompleteLog[myData.DayCounter].Add(true);
+        Debug.Log(myData.QuestCompleteLog);
         DataLogic.SaveGameData(myData);
         status.text = "Quest completed";
     }

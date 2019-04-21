@@ -10,9 +10,12 @@ public class resetGameData : MonoBehaviour
     // Start is called before the first frame update
     public InputField name;
     public DataObject myData = new DataObject();
+     
     
     void Start()
     {
+        //Need to initialize before loading or else null oject error
+        myData.QuestCompleteLog = new List<bool>[28];
         DataLogic.LoadGameData(myData);
         Debug.Log(myData.FirstTimePlaying);
         name.text = "Enter name here...";
@@ -35,9 +38,7 @@ public class resetGameData : MonoBehaviour
             myData.IntellectLevel = 0;
             myData.QuestAmountCompleted = 0;
             //TODO initialize all to false?
-            myData.QuestCompleteLog = new List<bool>[28];
-            // myData.QuestCompleteLog[0].Add(true);
-            // myData.QuestCompleteLog[1].Add(false);
+           
             Debug.Log("quest log");
             Debug.Log(myData.QuestCompleteLog);
 
