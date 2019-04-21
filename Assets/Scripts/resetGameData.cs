@@ -14,8 +14,6 @@ public class resetGameData : MonoBehaviour
     
     void Start()
     {
-        //Need to initialize before loading or else null oject error
-        myData.QuestCompleteLog = new List<bool>[28];
         DataLogic.LoadGameData(myData);
         Debug.Log(myData.FirstTimePlaying);
         name.text = "Enter name here...";
