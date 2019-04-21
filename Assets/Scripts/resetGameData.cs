@@ -64,19 +64,25 @@ public class resetGameData : MonoBehaviour
             //make sure to change to false after intializing game
 
             //Here We load the quest txt content
-            //Currently we use only place holder text
-            TextAsset myText = (TextAsset)Resources.Load("QuestText/test");
-            string[] textArray = myText.text.Split('#');
+            TextAsset preStrengthQuestLine = (TextAsset)Resources.Load("QuestText/StrengthQuestLinePre");
+            TextAsset preIntellectQuestLine = (TextAsset)Resources.Load("QuestText/IntellectQuestLinePre");
+            TextAsset preCharismaQuestLine = (TextAsset)Resources.Load("QuestText/CharismaQuestLinePre");
+            TextAsset postStrengthQuestLine = (TextAsset)Resources.Load("QuestText/StrengthQuestLinePost");
+            TextAsset postIntellectQuestLine = (TextAsset)Resources.Load("QuestText/IntellectQuestLinePost");
+            TextAsset postCharismaQuestLine = (TextAsset)Resources.Load("QuestText/CharismaQuestLinePost");
+            TextAsset postFailureQuestLine = (TextAsset)Resources.Load("QuestText/FailureQuestLinePost");
 
-            //Later we will set these to their specific quest lines
-            myData.StrengthQuestLine = textArray;
-            myData.IntellectQuestLine = textArray;
-            myData.IntellectQuestLine = textArray;
-            myData.FailureQuestLine = textArray;
+            myData.PreStrengthQuestLine = preStrengthQuestLine.text.Split('#');
+            myData.PreCharismaQuestLine = preIntellectQuestLine.text.Split('#');
+            myData.PreIntellectQuestLine = preCharismaQuestLine.text.Split('#');
+            myData.PostStrengthQuestLine = postStrengthQuestLine.text.Split('#');
+            myData.PostCharismaQuestLine = postIntellectQuestLine.text.Split('#');
+            myData.PostIntellectQuestLine = postCharismaQuestLine.text.Split('#');
+            myData.FailureQuestLine = postFailureQuestLine.text.Split('#');
 
 
 
-            
+
         }
         else
         {

@@ -59,11 +59,17 @@ public class DataObject
 
     //Questlines (only differ by every 7th day)
     [SerializeField]
-    private string[] strengthQuestLine;
+    private string[] preStrengthQuestLine;
     [SerializeField]
-    private string[] charismaQuestLine;
+    private string[] preCharismaQuestLine;
     [SerializeField]
-    private string[] intellectQuestLine;
+    private string[] preIntellectQuestLine;
+    [SerializeField]
+    private string[] postStrengthQuestLine;
+    [SerializeField]
+    private string[] postCharismaQuestLine;
+    [SerializeField]
+    private string[] postIntellectQuestLine;
     [SerializeField]
     private string[] failureQuestLine;
 
@@ -87,9 +93,7 @@ public class DataObject
     public int IntellectLevel { get => intellectLevel; set => intellectLevel = value; }
     public double QuestAmountCompleted { get => questAmountCompleted; set => questAmountCompleted = value; }
     public bool FirstTimePlaying { get => firstTimePlaying; set => firstTimePlaying = value; }
-    public string[] StrengthQuestLine { get => strengthQuestLine; set => strengthQuestLine = value; }
-    public string[] CharismaQuestLine { get => charismaQuestLine; set => charismaQuestLine = value; }
-    public string[] IntellectQuestLine { get => intellectQuestLine; set => intellectQuestLine = value; }
+  
     public string[] FailureQuestLine { get => failureQuestLine; set => failureQuestLine = value; }
     public bool[] QuestCompleteLog { get => questCompleteLog; set => questCompleteLog = value; }
     public int[] DailyCharismaEXP { get => dailyCharismaEXP; set => dailyCharismaEXP = value; }
@@ -98,4 +102,10 @@ public class DataObject
     public int[] DailyTotalEXP { get => dailyTotalEXP; set => dailyTotalEXP = value; }
     public int DailyQuestCounter { get => dailyQuestCounter; set => dailyQuestCounter = value; }
     public int LastDayPlayed { get => lastDayPlayed; set => lastDayPlayed = value; }
+    public string[] PreStrengthQuestLine { get => preStrengthQuestLine; set => preStrengthQuestLine = value; }
+    public string[] PreCharismaQuestLine { get => preCharismaQuestLine; set => preCharismaQuestLine = value; }
+    public string[] PreIntellectQuestLine { get => preIntellectQuestLine; set => preIntellectQuestLine = value; }
+    public string[] PostStrengthQuestLine { get => postStrengthQuestLine; set => postStrengthQuestLine = value; }
+    public string[] PostCharismaQuestLine { get => postCharismaQuestLine; set => postCharismaQuestLine = value; }
+    public string[] PostIntellectQuestLine { get => postIntellectQuestLine; set => postIntellectQuestLine = value; }
 }
