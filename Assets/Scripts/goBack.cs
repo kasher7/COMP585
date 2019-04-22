@@ -18,6 +18,12 @@ public class goBack : MonoBehaviour
         
     }
     public void goBackMenu(){
-        SceneManager.LoadScene("menu");
+        DataObject myData = new DataObject();
+        DataLogic.LoadGameData(myData);
+        if (myData.FirstTimePlaying){
+            SceneManager.LoadScene("initializeGame");
+        }else{
+            SceneManager.LoadScene("menu");
+        }
     }
 }
