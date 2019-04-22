@@ -10,7 +10,7 @@ You successfully rallied the townsfolk to fight goblin thugs!
 #
 You successfully rallied the townsfolk to fight goblin thugs!
 #
-Boran’s goblin thugs repulsed, you make your way to Boran himself. With the people of Stardingdale behind you, Boran quails before you. With a final shout, the cyclops turns and runs. Before he flees, he shouts out, “You may have defeated me, but I’ll be back! You’ll never catch me in the Dark Forest!" 
+Boran's goblin thugs repulsed, you make your way to Boran himself. With the people of Stardingdale behind you, Boran quails before you. With a final shout, the cyclops turns and runs. Before he flees, he shouts out, 'You may have defeated me, but I'll be back! You'll never catch me in the Dark Forest!" 
 #
 You befriended the local woods-witch to guide you through the forest!
 #

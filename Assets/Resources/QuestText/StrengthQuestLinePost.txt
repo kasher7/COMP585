@@ -10,7 +10,7 @@ You successfully fought back the goblins attacking the town!
 #
 You successfully fought back the goblins attacking the town!
 #
-Boran’s goblin thugs repulsed, you make your way to Boran himself.  With a swing of your mighty sword, you disarm the cyclops! With a final shout, the cyclops turns and runs. Before he flees, he shouts out, “You may have defeated me, but I’ll be back! You’ll never catch me in the Dark Forest!" 
+Boran's goblin thugs repulsed, you make your way to Boran himself.  With a swing of your mighty sword, you disarm the cyclops! With a final shout, the cyclops turns and runs. Before he flees, he shouts out, 'You may have defeated me, but I'll be back! You'll never catch me in the Dark Forest!" 
 #
 You hiked through the dense underbrush of the Dark Forest, fighting your way through hordes of giant spiders.
 #
