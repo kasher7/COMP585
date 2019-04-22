@@ -9,6 +9,8 @@ public static class questConstants
 
     public static string charClass;
 
+    public static int timeSpent;
+
     public static void setQuestTime(int value){
         questTime = value;
     }
@@ -19,6 +21,10 @@ public static class questConstants
 
     public static void setCharClass(string value){
         charClass = value;
+    }
+
+    public static void setTimeSpent(int value){
+        timeSpent = value;
     }
 
 

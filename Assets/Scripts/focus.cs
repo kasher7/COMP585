@@ -97,6 +97,7 @@ public class focus : MonoBehaviour
         // check quest failed
         if (text.text == "Failed")
         {
+            questConstants.timeSpent = questConstants.questTime - (int)((timeLeftSec - timeLeftSec % 60)/60);
             SceneManager.LoadScene("questFailed");
         }
     }
