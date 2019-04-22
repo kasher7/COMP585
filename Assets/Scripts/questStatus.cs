@@ -28,17 +28,17 @@ public class questStatus : MonoBehaviour
         DataObject myData = new DataObject();
         DataLogic.LoadGameData(myData);
         if (questConstants.questType == "Strength"){
+            story.text = myData.PostStrengthQuestLine[myData.DayCounter];
             myData.StrengthEXP +=expGained;
             myData.DailyStrengthEXP[myData.DayCounter] += expGained;
-            story.text = myData.PostStrengthQuestLine[myData.DayCounter];
         }else if (questConstants.questType == "Charisma"){
+            story.text = myData.PostCharismaQuestLine[myData.DayCounter];    
             myData.CharismaEXP +=expGained;
             myData.DailyCharismaEXP[myData.DayCounter] += expGained;
-            story.text = myData.PostCharismaQuestLine[myData.DayCounter];    
         } else if (questConstants.questType == "Intelligence"){
+            story.text = myData.PostIntellectQuestLine[myData.DayCounter]; 
             myData.IntellectEXP +=expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
-            story.text = myData.PostIntellectQuestLine[myData.DayCounter];
         }
         //Dont go over the max index length
         //it a temp solution
