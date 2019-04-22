@@ -29,17 +29,14 @@ public class questStatus : MonoBehaviour
         DataLogic.LoadGameData(myData);
         if (questConstants.questType == "Strength"){
             myData.StrengthEXP +=expGained;
-            myData.TotalEXP += expGained;
             myData.DailyStrengthEXP[myData.DayCounter] += expGained;
             story.text = myData.PostStrengthQuestLine[myData.DayCounter];
         }else if (questConstants.questType == "Charisma"){
             myData.CharismaEXP +=expGained;
-            myData.TotalEXP += expGained;
             myData.DailyCharismaEXP[myData.DayCounter] += expGained;
             story.text = myData.PostCharismaQuestLine[myData.DayCounter];    
         } else if (questConstants.questType == "Intelligence"){
             myData.IntellectEXP +=expGained;
-            myData.TotalEXP += expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
             story.text = myData.PostIntellectQuestLine[myData.DayCounter];
         }

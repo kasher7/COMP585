@@ -9,12 +9,16 @@ public class getDayInfo : MonoBehaviour
     // Start is called before the first frame update
     private GameObject[] dayButtons;
     public Text info;
+    public DataObject myData = new DataObject();
+
     void Start()
     {
+        DataLogic.LoadGameData(myData);
         dayButtons = GameObject.FindGameObjectsWithTag("calender");
         for (int i =0; i< dayButtons.Length ; i++){
+            int capturedIterator = i;
             // Debug.Log(dayButtons[i].GetComponentInChildren<Text>().text);
-            dayButtons[i].GetComponent<Button>().onClick.AddListener(delegate {dayClicked(i+1); });
+            dayButtons[i].GetComponent<Button>().onClick.AddListener(() => dayClicked(capturedIterator));
         }
     }
 
