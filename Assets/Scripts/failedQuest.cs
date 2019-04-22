@@ -14,15 +14,15 @@ public class failedQuest : MonoBehaviour
         DataObject myData = new DataObject();
         DataLogic.LoadGameData(myData);
         if (questConstants.questType == "Strength"){
-            story.text = myData.failureQuestLine[myData.DayCounter];
+            story.text = myData.FailureQuestLine[myData.DayCounter];
             myData.StrengthEXP +=expGained;
             myData.DailyStrengthEXP[myData.DayCounter] += expGained;
         }else if (questConstants.questType == "Charisma"){
-            story.text = myData.failureQuestLine[myData.DayCounter];    
+            story.text = myData.FailureQuestLine[myData.DayCounter];    
             myData.CharismaEXP +=expGained;
             myData.DailyCharismaEXP[myData.DayCounter] += expGained;
         } else if (questConstants.questType == "Intelligence"){
-            story.text = myData.failureQuestLine[myData.DayCounter]; 
+            story.text = myData.FailureQuestLine[myData.DayCounter]; 
             myData.IntellectEXP +=expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
         }
