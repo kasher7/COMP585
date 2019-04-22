@@ -11,10 +11,16 @@ public class DataLogic
     public static void SaveGameData(DataObject myObject)
     {
         UpdateGameData(myObject);
-        string dataAsJson = JsonUtility.ToJson(myObject);
+        var dataAsJson = JsonUtility.ToJson(myObject);
+        var startDateAsJson = JsonUtility.ToJson((JsonDateTime)myObject.StartDate);
+        var currentDateAsJson = JsonUtility.ToJson((JsonDateTime)myObject.CurrentDate);
         string filePath = Application.dataPath + "/Data/Data.json";
+        string startDateFilePath = Application.dataPath + "/Data/StartDate.json";
+        string currentDateFilePath = Application.dataPath + "/Data/CurrentDate.json";
         Debug.Log(dataAsJson);
         File.WriteAllText(filePath, dataAsJson);
+        File.WriteAllText(startDateFilePath, startDateAsJson);
+        File.WriteAllText(currentDateFilePath, currentDateAsJson);
     }
 
     public static void LoadGameData(DataObject myObject)
@@ -30,9 +36,16 @@ public class DataLogic
     {
         
         string filePath = Application.dataPath + "/Data/Data.json";
+        string startDateFilePath = Application.dataPath + "/Data/StartDate.json";
+        string currentDateFilePath = Application.dataPath + "/Data/CurrentDate.json";
 
         string dataAsJson = File.ReadAllText(filePath);
+        var startDateAsJson = File.ReadAllText(startDateFilePath);
+        var currentDateAsJson = File.ReadAllText(currentDateFilePath);
         JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
+        myObject.StartDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime>(startDateAsJson);
+        myObject.CurrentDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime> (currentDateAsJson);
+        
     }
 
     public static void UpdateGameData(DataObject myObject)
