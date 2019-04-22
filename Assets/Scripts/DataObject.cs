@@ -9,19 +9,19 @@ public class DataObject
     //General Data
     //Need to serialize private field so it can be converted to json
     [SerializeField]
-    private string playerName;
+    private string playerName = "Deez nuts";
     [SerializeField]
     private int questLength; //total quest length in minutes
     [SerializeField]
-    private int dayCounter;
+    private int dayCounter = 0;
     [SerializeField]
-    private int lastDayPlayed;
+    private int lastDayPlayed = 0;
 
 
     [SerializeField]
-    private System.DateTime startDate;
+    private System.DateTime startDate = System.DateTime.Now;
     [SerializeField]
-    private System.DateTime currentDate;
+    private System.DateTime currentDate = System.DateTime.Now;
     [SerializeField]
     private int[] dailyCharismaEXP = new int[28];
     [SerializeField]

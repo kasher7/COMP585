@@ -28,7 +28,7 @@ public class DataLogic
 
     public static void FirstLoadGameData(DataObject myObject)
     {
-        // UpdateGameData(myObject);
+        
         string filePath = Application.dataPath + "/Data/Data.json";
 
         string dataAsJson = File.ReadAllText(filePath);
@@ -44,9 +44,8 @@ public class DataLogic
         myObject.StrengthLevel = myObject.StrengthEXP / 100;
         myObject.CharismaLevel = myObject.CharismaEXP / 100;
         myObject.IntellectLevel = myObject.IntellectEXP / 100;
-
-        Debug.Log(myObject.DayCounter);
         Debug.Log(myObject.DailyTotalEXP.Length);
+
         myObject.DailyTotalEXP[myObject.DayCounter] = myObject.DailyStrengthEXP[myObject.DayCounter] + 
             myObject.DailyIntellectEXP[myObject.DayCounter] + 
             myObject.DailyCharismaEXP[myObject.DayCounter];
