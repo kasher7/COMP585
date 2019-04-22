@@ -17,7 +17,7 @@ public class resetGameData : MonoBehaviour
 
         DataLogic.LoadGameData(myData);
         Debug.Log(myData.FirstTimePlaying);
-        name.text = "";
+        name.text = " ";
         if (myData.FirstTimePlaying)
         {
             //TODO let user pick name
@@ -27,6 +27,9 @@ public class resetGameData : MonoBehaviour
             myData.CurrentDate = System.DateTime.Now;
             myData.DayCounter = System.Convert.ToInt32((myData.CurrentDate-myData.StartDate).TotalDays);
             myData.LastDayPlayed = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
+            Debug.Log("printing dates");
+            Debug.Log(myData.CurrentDate);
+            Debug.Log(myData.LastDayPlayed);
             //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
             myData.TotalEXP = 0;
             myData.PlayerLevel = 0;
@@ -54,13 +57,17 @@ public class resetGameData : MonoBehaviour
 
             //TODO initialize all to zero?
             myData.DailyCharismaEXP = new int[28];
-            Array.Clear(myData.DailyCharismaEXP,0,myData.DailyCharismaEXP.Length);
+            // Array.Clear(myData.DailyCharismaEXP,0,myData.DailyCharismaEXP.Length);
             myData.DailyStrengthEXP = new int[28];
-            Array.Clear(myData.DailyStrengthEXP,0,myData.DailyStrengthEXP.Length);
+            // Array.Clear(myData.DailyStrengthEXP,0,myData.DailyStrengthEXP.Length);
             myData.DailyIntellectEXP = new int[28];
-            Array.Clear(myData.DailyIntellectEXP,0,myData.DailyIntellectEXP.Length);
+            // Array.Clear(myData.DailyIntellectEXP,0,myData.DailyIntellectEXP.Length);
             myData.DailyTotalEXP = new int[28];
-            Array.Clear(myData.DailyTotalEXP,0,myData.DailyTotalEXP.Length);
+            Debug.Log("daily exp");
+            Debug.Log(myData.DailyTotalEXP);
+            // Array.Clear(myData.DailyTotalEXP,0,myData.DailyTotalEXP.Length);
+            Debug.Log("clearing");
+            Debug.Log(myData.DailyTotalEXP.Length);
             //Initialize first time playing trigger to true
             //make sure to change to false after intializing game
 
