@@ -30,6 +30,6 @@ public class getDayInfo : MonoBehaviour
 
     public void dayClicked(int dayN){
         
-        info.text = "On day " + dayN + " you spent " + (myData.DailyTotalEXP[dayN]/20).ToString() + " doing quest. " + (myData.DailyCharismaEXP[dayN]/20).ToString() + " mins in charisma " + (myData.DailyIntellectEXP[dayN]/20).ToString() + " mins in intellect " + (myData.DailyStrengthEXP[dayN]/20).ToString() + " mins in strength.";
+        info.text = "On day " + dayN + " you spent " + (myData.DailyTotalEXP[dayN]/20).ToString() + " mins doing quest. " + (myData.DailyCharismaEXP[dayN]/20).ToString() + " mins in charisma " + (myData.DailyIntellectEXP[dayN]/20).ToString() + " mins in intellect " + (myData.DailyStrengthEXP[dayN]/20).ToString() + " mins in strength.";
     }
 }
