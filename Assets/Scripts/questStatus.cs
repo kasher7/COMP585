@@ -40,6 +40,9 @@ public class questStatus : MonoBehaviour
             myData.IntellectEXP +=expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
         }
+        myData.DailyTotalEXP[myData.DayCounter] = myData.DailyStrengthEXP[myData.DayCounter] + 
+            myData.DailyIntellectEXP[myData.DayCounter] + 
+            myData.DailyCharismaEXP[myData.DayCounter];
         //Dont go over the max index length
         //it a temp solution
         myData.QuestCompleteLog[myData.DayCounter*100 + myData.DailyQuestCounter] = true;
