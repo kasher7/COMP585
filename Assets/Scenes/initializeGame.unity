@@ -622,6 +622,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   name: {fileID: 1173962278}
+  myData:
+    playerName: Deez nuts
+    questLength: 0
+    dayCounter: 0
+    lastDayPlayed: 0
+    dailyCharismaEXP: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    dailyStrengthEXP: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    dailyIntellectEXP: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    dailyTotalEXP: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    totalEXP: 0
+    playerLevel: 0
+    strengthEXP: 0
+    charismaEXP: 0
+    intellectEXP: 0
+    strengthLevel: 0
+    charismaLevel: 0
+    intellectLevel: 0
+    questAmountCompleted: 0
+    questCompleteLog: 
+    dailyQuestCounter: 0
+    firstTimePlaying: 1
+    preStrengthQuestLine: []
+    preCharismaQuestLine: []
+    preIntellectQuestLine: []
+    postStrengthQuestLine: []
+    postCharismaQuestLine: []
+    postIntellectQuestLine: []
+    failureQuestLine: []
 --- !u!4 &1244120430
 Transform:
   m_ObjectHideFlags: 0
@@ -962,6 +990,7 @@ GameObject:
   - component: {fileID: 2110257770}
   - component: {fileID: 2110257769}
   - component: {fileID: 2110257768}
+  - component: {fileID: 2110257771}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -1017,6 +1046,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2110257771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2110257767}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1997211142, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ForceModuleActive: 0
 --- !u!1 &2131644878
 GameObject:
   m_ObjectHideFlags: 0
