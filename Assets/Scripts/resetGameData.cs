@@ -24,8 +24,8 @@ public class resetGameData : MonoBehaviour
             myData.QuestLength = 28;
             myData.StartDate = System.DateTime.Now;
             myData.CurrentDate = System.DateTime.Now;
-            myData.DayCounter = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
-            myData.LastDayPlayed = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
+            myData.DayCounter = System.Convert.ToInt32((myData.StartDate - myData.CurrentDate).TotalDays);
+            myData.LastDayPlayed = System.Convert.ToInt32((myData.StartDate - myData.CurrentDate).TotalDays);
             //TODO I'm just assuming these arrays initialize to all zeros...If not we'll probably find out later
             myData.TotalEXP = 0;
             myData.PlayerLevel = 0;
