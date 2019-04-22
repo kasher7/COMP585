@@ -13,6 +13,8 @@ public class questStatus : MonoBehaviour
     public Text exp;
 
     public Text status;
+
+    public Text story;
     // Start is called before the first frame update
 
     
@@ -29,14 +31,17 @@ public class questStatus : MonoBehaviour
             myData.StrengthEXP +=expGained;
             myData.TotalEXP += expGained;
             myData.DailyStrengthEXP[myData.DayCounter] += expGained;
+            story.text = myData.PostStrengthQuestLine[myData.DayCounter];
         }else if (questConstants.questType == "Charisma"){
             myData.CharismaEXP +=expGained;
             myData.TotalEXP += expGained;
             myData.DailyCharismaEXP[myData.DayCounter] += expGained;
+            story.text = myData.PostCharismaQuestLine[myData.DayCounter];    
         } else if (questConstants.questType == "Intelligence"){
             myData.IntellectEXP +=expGained;
             myData.TotalEXP += expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
+            story.text = myData.PostIntellectQuestLine[myData.DayCounter];
         }
         //Dont go over the max index length
         //it a temp solution

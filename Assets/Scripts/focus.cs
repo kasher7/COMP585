@@ -22,8 +22,22 @@ public class focus : MonoBehaviour
     bool isSleep;
 
     int fingerCount;
+
+    // data obj
+    public DataObject myData = new DataObject();
+    
     void Start()
     {
+        DataLogic.LoadGameData(myData);
+        // setting up questing quates
+        if (questConstants.questType == "Strength"){
+            Debug.Log(myData.PreStrengthQuestLine[myData.DayCounter]);
+            questTypes.text = myData.PreStrengthQuestLine[myData.DayCounter];
+        }else if (questConstants.questType == "Charisma"){
+            questTypes.text = myData.PreCharismaQuestLine[myData.DayCounter];
+        } else if (questConstants.questType == "Intelligence"){
+            questTypes.text = myData.PreIntellectQuestLine[myData.DayCounter];
+        }
         // img = background.GetComponent<Image>();
         // img.color = Color.blue;
         text.text = "In Quest";

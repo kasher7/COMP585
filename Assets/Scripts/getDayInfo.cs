@@ -7,10 +7,14 @@ public class getDayInfo : MonoBehaviour
 {
 
     // Start is called before the first frame update
+    private GameObject[] dayButtons;
+    public Text info;
     void Start()
     {
-        for (int i =0; i< GameObject.FindGameObjectsWithTag("calender").Length ; i++){
-            Debug.Log(GameObject.FindGameObjectsWithTag("calender")[i].GetComponentInChildren<Text>().text);
+        dayButtons = GameObject.FindGameObjectsWithTag("calender");
+        for (int i =0; i< dayButtons.Length ; i++){
+            // Debug.Log(dayButtons[i].GetComponentInChildren<Text>().text);
+            dayButtons[i].GetComponent<Button>().onClick.AddListener(delegate {dayClicked(i+1); });
         }
     }
 
@@ -18,5 +22,9 @@ public class getDayInfo : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void dayClicked(int dayN){
+        info.text = "this day "+ dayN + " is clicked";
     }
 }
