@@ -24,6 +24,7 @@ public class newCharacter : MonoBehaviour
     {
         myData.FirstTimePlaying = true;
         DataLogic.SaveGameData(myData);
+        SceneManager.LoadScene("initializeGame");
     }
 
 
