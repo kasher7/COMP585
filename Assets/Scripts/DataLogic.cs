@@ -19,6 +19,7 @@ public class DataLogic
 
     public static void LoadGameData(DataObject myObject)
     {
+        UpdateGameData(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
 
         string dataAsJson = File.ReadAllText(filePath);
@@ -41,13 +42,13 @@ public class DataLogic
 
         //Date and time stuff
         myObject.CurrentDate = System.DateTime.Now;
-        myObject.DayCounter = System.Convert.ToInt32((myObject.StartDate - myObject.CurrentDate).TotalDays);
+        myObject.DayCounter = System.Convert.ToInt32((myObject.CurrentDate - myObject.StartDate).TotalDays);
         if(myObject.DayCounter != myObject.LastDayPlayed)
         {
             Debug.Log("New Day");
             myObject.DailyQuestCounter = 0;
         }
-        myObject.LastDayPlayed = System.Convert.ToInt32((myObject.StartDate - myObject.CurrentDate).TotalDays);
+        myObject.LastDayPlayed = System.Convert.ToInt32((myObject.CurrentDate - myObject.StartDate).TotalDays);
 
 
 
