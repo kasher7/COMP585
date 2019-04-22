@@ -23,13 +23,13 @@ public class DataObject
     [SerializeField]
     private System.DateTime currentDate;
     [SerializeField]
-    private int[] dailyCharismaEXP;
+    private int[] dailyCharismaEXP = new int[28];
     [SerializeField]
-    private int[] dailyStrengthEXP;
+    private int[] dailyStrengthEXP = new int[28];
     [SerializeField]
-    private int[] dailyIntellectEXP;
+    private int[] dailyIntellectEXP = new int[28];
     [SerializeField]
-    private int[] dailyTotalEXP;
+    private int[] dailyTotalEXP = new int[28];
     [SerializeField]
     private int totalEXP;
     [SerializeField]
