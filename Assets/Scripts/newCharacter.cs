@@ -23,6 +23,9 @@ public class newCharacter : MonoBehaviour
     public void resetGame()
     {
         myData.FirstTimePlaying = true;
+        // DataLogic.SaveGameData(myData);
+        myData.StartDate = System.DateTime.Now;
+        myData.CurrentDate = System.DateTime.Now;
         DataLogic.SaveGameData(myData);
         SceneManager.LoadScene("initializeGame");
     }

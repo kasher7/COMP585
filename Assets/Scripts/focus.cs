@@ -29,18 +29,23 @@ public class focus : MonoBehaviour
     void Start()
     {
         DataLogic.LoadGameData(myData);
-        // setting up questing quates
-        if (questConstants.questType == "Strength"){
-            Debug.Log(myData.PreStrengthQuestLine[myData.DayCounter]);
-            questTypes.text = myData.PreStrengthQuestLine[myData.DayCounter];
-        }else if (questConstants.questType == "Charisma"){
-            questTypes.text = myData.PreCharismaQuestLine[myData.DayCounter];
-        } else if (questConstants.questType == "Intelligence"){
-            questTypes.text = myData.PreIntellectQuestLine[myData.DayCounter];
+        text.text = "Failed";
+        if (text.text != "Failed"){
+            if (questConstants.questType == "Strength"){
+                Debug.Log(myData.PreStrengthQuestLine.Length);
+                questTypes.text = myData.PreStrengthQuestLine[myData.DayCounter];
+            }else if (questConstants.questType == "Charisma"){
+                questTypes.text = myData.PreCharismaQuestLine[myData.DayCounter];
+            } else if (questConstants.questType == "Intelligence"){
+                questTypes.text = myData.PreIntellectQuestLine[myData.DayCounter];
+            }
+        }else{
+            Debug.Log("Failing text");
         }
+        // setting up questing quates
+
         // img = background.GetComponent<Image>();
         // img.color = Color.blue;
-        text.text = "In Quest";
         timerText.text = (timeLeftSec - timeLeftSec % 60)/60 + " minutes " + timeLeftSec % 60 + " seconds left";
         // questTypes.text = "you are on a " + questConstants.questType + " quest!";
         focused = Application.isFocused;
@@ -48,6 +53,7 @@ public class focus : MonoBehaviour
         timer = 0;
         fingerCount = 0;
         isSleep = false;
+        // text.text = "Failed";
 
     }
 
@@ -106,10 +112,12 @@ public class focus : MonoBehaviour
     {
         if (pauseStatus)
         {
+            // text.text = "Failed";
             Debug.Log("in focus");
         }
         else
         {
+            // text.text = "In Quest";
             Debug.Log("out of focus");
         }
     }
@@ -125,7 +133,7 @@ public class focus : MonoBehaviour
         }
         else
         {
-            text.text = "In Quest";
+            text.text = "Failed";
             //Debug.Log("In Focus");
         }
     }
