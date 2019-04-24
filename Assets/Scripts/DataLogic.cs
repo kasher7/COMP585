@@ -27,15 +27,6 @@ public class DataLogic
     {
         UpdateGameData(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
-
-        string dataAsJson = File.ReadAllText(filePath);
-        JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
-    }
-
-    public static void FirstLoadGameData(DataObject myObject)
-    {
-        
-        string filePath = Application.dataPath + "/Data/Data.json";
         string startDateFilePath = Application.dataPath + "/Data/StartDate.json";
         string currentDateFilePath = Application.dataPath + "/Data/CurrentDate.json";
 
@@ -44,7 +35,19 @@ public class DataLogic
         var currentDateAsJson = File.ReadAllText(currentDateFilePath);
         JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
         myObject.StartDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime>(startDateAsJson);
-        myObject.CurrentDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime> (currentDateAsJson);
+        myObject.CurrentDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime>(currentDateAsJson);
+    }
+
+    public static void FirstLoadGameData(DataObject myObject)
+    {
+        
+        string filePath = Application.dataPath + "/Data/Data.json";
+        
+
+        string dataAsJson = File.ReadAllText(filePath);
+       
+        JsonUtility.FromJsonOverwrite(dataAsJson, myObject);
+        
         
     }
 
