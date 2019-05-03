@@ -618,7 +618,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e94160560137b448a5e95a6d60d24d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  story: {fileID: 0}
+  story: {fileID: 490979398}
 --- !u!4 &660784165
 Transform:
   m_ObjectHideFlags: 0
