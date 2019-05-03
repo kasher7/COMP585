@@ -16,11 +16,12 @@ public class getDayInfo : MonoBehaviour
     {
         myData = DataLogicNew.Load();
         dayButtons = GameObject.FindGameObjectsWithTag("calender");
-        for (int i =0; i< dayButtons.Length ; i++){
-            int capturedIterator = i;
-            // Debug.Log(dayButtons[i].GetComponentInChildren<Text>().text);
-            dayButtons[i].GetComponent<Button>().onClick.AddListener(() => dayClicked(capturedIterator));
-        }
+        // for some reason it mal functions on Android
+        // for (int i =0; i< dayButtons.Length ; i++){
+        //     // int capturedIterator = i;
+        //     // Debug.Log(dayButtons[i].GetComponentInChildren<Text>().text);
+        //     dayButtons[i].GetComponent<Button>().onClick.AddListener(() => dayClicked(i));
+        // }
     }
 
     // Update is called once per frame
