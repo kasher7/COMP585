@@ -22,25 +22,21 @@ public class DataLogic
         File.WriteAllText(startDateFilePath, startDateAsJson);
         File.WriteAllText(currentDateFilePath, currentDateAsJson);
     }
-    public void Save()
+    public void Save(DataObject myObject)
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
-
-        PlayerData data = new PlayerData();
-        data.score = score;
-        data.levelcount = levelcount;
 
         bf.Serialize(file, data);
         file.Close();
     }
 
-    public void Load()
+    public void Load(DataObject myObject)
     {
         if (File.Exists(Application.persistentDataPath + "/Data.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
-            FileStream file = File.Open(Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+            FileStream file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
             PlayerData data = (PlayerData)bf.Deserialize(file);
             file.Close();
 
