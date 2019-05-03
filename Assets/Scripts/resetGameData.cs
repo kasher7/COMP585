@@ -23,10 +23,10 @@ public class resetGameData : MonoBehaviour
             //TODO let user pick name
             myData.PlayerName = name.text;
             myData.QuestLength = 28;
-            myData.StartDate = System.DateTime.Now;
-            myData.CurrentDate = System.DateTime.Now;
-            myData.DayCounter = System.Convert.ToInt32((myData.CurrentDate-myData.StartDate).TotalDays);
-            myData.LastDayPlayed = System.Convert.ToInt32((myData.CurrentDate - myData.StartDate).TotalDays);
+            myData.StartDate = System.DateTime.Now.ToString();
+            myData.CurrentDate = System.DateTime.Now.ToString();
+            myData.DayCounter = System.Convert.ToInt32((System.DateTime.Parse(myData.CurrentDate)-System.DateTime.Parse(myData.StartDate)).TotalDays);
+            myData.LastDayPlayed = System.Convert.ToInt32((System.DateTime.Parse(myData.CurrentDate) - System.DateTime.Parse(myData.StartDate)).TotalDays);
             Debug.Log("printing dates");
             Debug.Log(myData.CurrentDate);
             Debug.Log(myData.LastDayPlayed);

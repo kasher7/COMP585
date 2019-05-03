@@ -19,9 +19,9 @@ public class DataObject
 
 
     [SerializeField]
-    private System.DateTime startDate;
+    private string startDate;
     [SerializeField]
-    private System.DateTime currentDate;
+    private string currentDate;
     [SerializeField]
     private int[] dailyCharismaEXP = new int[28];
     [SerializeField]
@@ -81,8 +81,8 @@ public class DataObject
     public string PlayerName { get => playerName; set => playerName = value; }
     public int QuestLength { get => questLength; set => questLength = value; }
     public int DayCounter { get => dayCounter; set => dayCounter = value; }
-    public System.DateTime StartDate { get => startDate; set => startDate = value; }
-    public System.DateTime CurrentDate { get => currentDate; set => currentDate = value; }
+    public string StartDate { get => startDate; set => startDate = value; }
+    public string CurrentDate { get => currentDate; set => currentDate = value; }
     public int TotalEXP { get => totalEXP; set => totalEXP = value; }
     public int PlayerLevel { get => playerLevel; set => playerLevel = value; }
     public int StrengthEXP { get => strengthEXP; set => strengthEXP = value; }
