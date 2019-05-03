@@ -6,11 +6,11 @@ using System.IO;
 
 //Data Manipulation order
 
-public class DataLogic
+public class DataLogicNew
 {
-    public static void SaveGameData(DataObject myObject)
+    public static void SaveGameDataNew(DataObject myObject)
     {
-        UpdateGameData(myObject);
+        UpdateData(myObject);
         var dataAsJson = JsonUtility.ToJson(myObject);
         var startDateAsJson = JsonUtility.ToJson((JsonDateTime)myObject.StartDate);
         var currentDateAsJson = JsonUtility.ToJson((JsonDateTime)myObject.CurrentDate);
@@ -22,32 +22,35 @@ public class DataLogic
         File.WriteAllText(startDateFilePath, startDateAsJson);
         File.WriteAllText(currentDateFilePath, currentDateAsJson);
     }
-    public void Save(DataObject myObject)
+    public static void Save(DataObject myObject)
     {
+        UpdateData(myObject);
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
 
-        bf.Serialize(file, data);
+        bf.Serialize(file, myObject);
         file.Close();
     }
 
-    public void Load(DataObject myObject)
+    public static DataObject Load()
     {
         if (File.Exists(Application.persistentDataPath + "/Data.dat"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
-            PlayerData data = (PlayerData)bf.Deserialize(file);
+            DataObject data = (DataObject)bf.Deserialize(file);
             file.Close();
 
-            score = data.score;
-            levelcount = data.levelcount;
+            return data;
+        }else{
+            DataObject data = new DataObject();
+            return data;
         }
     }
 
-    public static void LoadGameData(DataObject myObject)
+    public static void LoadGameDataNew(DataObject myObject)
     {
-        UpdateGameData(myObject);
+        UpdateData(myObject);
         string filePath = Application.dataPath + "/Data/Data.json";
         string startDateFilePath = Application.dataPath + "/Data/StartDate.json";
         string currentDateFilePath = Application.dataPath + "/Data/CurrentDate.json";
@@ -60,7 +63,7 @@ public class DataLogic
         myObject.CurrentDate = (System.DateTime)JsonUtility.FromJson<JsonDateTime>(currentDateAsJson);
     }
 
-    public static void FirstLoadGameData(DataObject myObject)
+    public static void FirstLoadGameDataNew(DataObject myObject)
     {
 
         string filePath = Application.dataPath + "/Data/Data.json";
@@ -73,7 +76,7 @@ public class DataLogic
 
     }
 
-    public static void UpdateGameData(DataObject myObject)
+    public static void UpdateData(DataObject myObject)
     {
         myObject.TotalEXP = myObject.StrengthEXP + myObject.CharismaEXP +
             myObject.IntellectEXP;
