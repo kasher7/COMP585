@@ -19,9 +19,9 @@ public class DataObject
 
 
     [SerializeField]
-    private string startDate;
+    private string startDate = System.DateTime.Now.ToString();
     [SerializeField]
-    private string currentDate;
+    private string currentDate = System.DateTime.Now.ToString();
     [SerializeField]
     private int[] dailyCharismaEXP = new int[28];
     [SerializeField]
