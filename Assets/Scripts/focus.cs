@@ -29,7 +29,7 @@ public class focus : MonoBehaviour
     void Start()
     {
         myData = DataLogicNew.Load();
-        text.text = " ";
+        text.text = "In Quest";
         if (text.text != "Failed"){
             if (questConstants.questType == "Strength"){
                 Debug.Log(myData.PreStrengthQuestLine.Length);
@@ -112,6 +112,7 @@ public class focus : MonoBehaviour
     {
         if (pauseStatus)
         {
+            text.text = "In Quest";
             // text.text = "Failed";
             Debug.Log("in focus");
         }
