@@ -15,7 +15,7 @@ public class resetGameData : MonoBehaviour
     void Start()
     {
         // DataLogic.SaveGameData(myData);
-        myData = DataLogicNew.Load();
+        myData = DataLogicNew.FirstLoad();
         Debug.Log(myData.FirstTimePlaying);
         name.text = " ";
         if (myData.FirstTimePlaying)
@@ -92,7 +92,7 @@ public class resetGameData : MonoBehaviour
         else
         {
             Debug.Log("loading");
-            // DataLogic.Loa(myData);
+            myData = DataLogicNew.Load();
             SceneManager.LoadScene("menu");
         }
         

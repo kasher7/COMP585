@@ -26,12 +26,32 @@ public class DataLogicNew
             BinaryFormatter bf = new BinaryFormatter();
             FileStream file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
             DataObject data = (DataObject)bf.Deserialize(file);
+            // UpdateData(data);
             file.Close();
 
             return data;
         }else{
             FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
             DataObject data = new DataObject();
+            // UpdateData(data);
+            return data;
+        }
+    }
+
+    public static DataObject FirstLoad(){
+        if (File.Exists(Application.persistentDataPath + "/Data.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/Data.dat", FileMode.Open);
+            DataObject data = (DataObject)bf.Deserialize(file);
+            UpdateData(data);
+            file.Close();
+
+            return data;
+        }else{
+            FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
+            DataObject data = new DataObject();
+            UpdateData(data);
             return data;
         }
     }
