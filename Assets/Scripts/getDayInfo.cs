@@ -37,7 +37,11 @@ public class getDayInfo : MonoBehaviour
                 sum += 1;
             }
         }
-        info.text = "On day " + (dayN+1) + " you spent " + (myData.DailyTotalEXP[dayN]/20).ToString() + " mins doing quest. You've completed " + sum+ " quests on this day.";
-        stats.text = "Types \n" + (myData.DailyCharismaEXP[dayN]/20).ToString() + " mins in charisma \n" + (myData.DailyIntellectEXP[dayN]/20).ToString() + " mins in intellect \n" + (myData.DailyStrengthEXP[dayN]/20).ToString() + " mins in strength";
+        info.text = "On day " + (dayN+1) + " you spent " + (myData.DailyTotalEXP[dayN]/20).ToString() + " mins doing quest. You've completed " + sum+ " quests on this day. ";
+        if ((dayN == 27)&&(sum>=1)){
+            stats.text = "You beat the game on this day.";
+        }else{
+            stats.text = "Types \n" + (myData.DailyCharismaEXP[dayN]/20).ToString() + " mins in charisma \n" + (myData.DailyIntellectEXP[dayN]/20).ToString() + " mins in intellect \n" + (myData.DailyStrengthEXP[dayN]/20).ToString() + " mins in strength";
+        }
     }
 }

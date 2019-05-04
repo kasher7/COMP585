@@ -12,7 +12,11 @@ public class failedQuest : MonoBehaviour
     void Start()
     {   int expGained = questConstants.timeSpent * 10;
         DataObject myData = DataLogicNew.Load();
-        if (questConstants.questType == "Strength"){
+        if (myData.DayCounter == 27){
+            // check for day 28 ie last day
+            story.text = "You have completed the game but you didn't beat the final boss. Start a new character and try again";
+        }else{
+           if (questConstants.questType == "Strength"){
             story.text = myData.FailureQuestLine[myData.DayCounter];
             myData.StrengthEXP +=expGained;
             myData.DailyStrengthEXP[myData.DayCounter] += expGained;
@@ -25,6 +29,8 @@ public class failedQuest : MonoBehaviour
             myData.IntellectEXP +=expGained;
             myData.DailyIntellectEXP[myData.DayCounter] += expGained;
         }
+        }
+        
         myData.DailyTotalEXP[myData.DayCounter] = myData.DailyStrengthEXP[myData.DayCounter] + 
             myData.DailyIntellectEXP[myData.DayCounter] + 
             myData.DailyCharismaEXP[myData.DayCounter];

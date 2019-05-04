@@ -31,6 +31,22 @@ public class focus : MonoBehaviour
         myData = DataLogicNew.Load();
         text.text = "In Quest";
         if (text.text != "Failed"){
+            // checks if he is worthy
+            Debug.Log("daycounter " + myData.DayCounter);
+            if(myData.DayCounter == 27){
+                for (int i = 0; i< (myData.QuestCompleteLog.Length/100)-1; i++){
+                    bool metReqirement = false;
+                    for (int j =0; j< 100; j++){
+                        if (myData.QuestCompleteLog[i*100+j]){
+                            metReqirement = true;
+                        }
+                    }
+                    if (!metReqirement){
+                        text.text = "Failed";
+                    }
+
+                }
+            }
             if (questConstants.questType == "Strength"){
                 Debug.Log(myData.PreStrengthQuestLine.Length);
                 questTypes.text = myData.PreStrengthQuestLine[myData.DayCounter];

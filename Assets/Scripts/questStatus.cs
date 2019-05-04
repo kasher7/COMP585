@@ -23,7 +23,7 @@ public class questStatus : MonoBehaviour
         int expGained = questConstants.questTime * 20;
         type.text = "Quest Type: " + questConstants.questType;
         time.text = "Time Spent: " + questConstants.questTime;
-        exp.text =  "Exp gained: " + expGained;
+        exp.text =  "Exp gained: +" + expGained;
         //Data update logic
         DataObject myData = new DataObject();
         myData = DataLogicNew.Load();
@@ -51,7 +51,11 @@ public class questStatus : MonoBehaviour
         myData.QuestAmountCompleted +=1;
         Debug.Log(myData.QuestCompleteLog);
         DataLogicNew.Save(myData);
-        status.text = "Quest completed";
+        if (myData.DayCounter == 27){
+            status.text = "Congradulations! You have completed the game.";
+        }else{
+            status.text = "Quest completed";
+        }
     }
 
     // Update is called once per frame
