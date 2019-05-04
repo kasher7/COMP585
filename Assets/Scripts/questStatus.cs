@@ -47,6 +47,7 @@ public class questStatus : MonoBehaviour
         //it a temp solution
         myData.QuestCompleteLog[myData.DayCounter*100 + myData.DailyQuestCounter] = true;
         myData.DailyQuestCounter += 1;
+        myData.QuestAmountCompleted +=1;
         Debug.Log(myData.QuestCompleteLog);
         DataLogic.SaveGameData(myData);
         status.text = "Quest completed";
