@@ -20,7 +20,7 @@ public class questStatus : MonoBehaviour
     
     void Start()
     {   
-        int expGained = questConstants.questTime * 20;
+        int expGained = questConstants.questTime * PlayerPrefs.GetInt("difficulty");
         type.text = "Quest Type: " + questConstants.questType;
         time.text = "Time Spent: " + questConstants.questTime;
         exp.text =  "Exp gained: +" + expGained;

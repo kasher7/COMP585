@@ -85,8 +85,9 @@ public class resetGameData : MonoBehaviour
             myData.PostIntellectQuestLine = postCharismaQuestLine.text.Split('#');
             myData.FailureQuestLine = postFailureQuestLine.text.Split('#');
 
-
-
+            //set difficult to defult 1
+            PlayerPrefs.SetInt("difficulty",1);
+            PlayerPrefs.SetInt("audio",1);
 
         }
         else
