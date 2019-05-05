@@ -14,7 +14,7 @@ public class getDayInfo : MonoBehaviour
 
     void Start()
     {
-        DataLogic.LoadGameData(myData);
+        myData = DataLogicNew.Load();
         dayButtons = GameObject.FindGameObjectsWithTag("calender");
         for (int i =0; i< dayButtons.Length ; i++){
             int capturedIterator = i;

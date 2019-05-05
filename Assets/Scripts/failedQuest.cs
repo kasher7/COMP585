@@ -11,8 +11,7 @@ public class failedQuest : MonoBehaviour
 
     void Start()
     {   int expGained = questConstants.timeSpent * 10;
-        DataObject myData = new DataObject();
-        DataLogic.LoadGameData(myData);
+        DataObject myData = DataLogicNew.Load();
         if (questConstants.questType == "Strength"){
             story.text = myData.FailureQuestLine[myData.DayCounter];
             myData.StrengthEXP +=expGained;
@@ -31,7 +30,7 @@ public class failedQuest : MonoBehaviour
             myData.DailyCharismaEXP[myData.DayCounter];
         myData.QuestCompleteLog[myData.DayCounter*100 + myData.DailyQuestCounter] = false;
         myData.DailyQuestCounter += 1;
-        DataLogic.SaveGameData(myData);
+        DataLogicNew.Save(myData);
     }
 
     // Update is called once per frame

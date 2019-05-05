@@ -26,7 +26,7 @@ public class newCharacter : MonoBehaviour
         // DataLogic.SaveGameData(myData);
         myData.StartDate = System.DateTime.Now;
         myData.CurrentDate = System.DateTime.Now;
-        DataLogic.SaveGameData(myData);
+        DataLogicNew.Save(myData);
         SceneManager.LoadScene("initializeGame");
     }
 

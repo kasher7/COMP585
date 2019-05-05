@@ -92,7 +92,7 @@ public class resetGameData : MonoBehaviour
         else
         {
             Debug.Log("loading");
-            DataLogic.LoadGameData(myData);
+            // DataLogic.Loa(myData);
             SceneManager.LoadScene("menu");
         }
         

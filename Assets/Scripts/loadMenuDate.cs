@@ -8,11 +8,13 @@ public class loadMenuDate : MonoBehaviour
     private DataObject myData = new DataObject();
     void Start()
     {
-        DataLogic.LoadGameData(myData);
+        myData = DataLogicNew.Load();
+;
         Debug.Log("print Date");
         Debug.Log(myData.CurrentDate);
         Debug.Log(myData.StartDate);
-        DataLogic.SaveGameData(myData);
+        myData = DataLogicNew.Load();
+
     }
 
     // Update is called once per frame

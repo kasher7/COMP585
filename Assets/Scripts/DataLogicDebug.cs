@@ -7,13 +7,11 @@ public class DataLogicDebug : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DataObject myObject = new DataObject();
-        DataLogic.LoadGameData(myObject);
+        DataObject myObject = DataLogicNew.Load();
         myObject.PlayerLevel = 55;
         myObject.FirstTimePlaying = true;
-        DataLogic.SaveGameData(myObject);
-        DataObject myNewObject = new DataObject();
-        DataLogic.LoadGameData(myNewObject);
+        DataLogicNew.Save(myObject);
+        DataObject myNewObject = DataLogicNew.Load();
         Debug.Log(myNewObject.PlayerLevel);
     }
 

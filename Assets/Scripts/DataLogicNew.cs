@@ -43,6 +43,7 @@ public class DataLogicNew
 
             return data;
         }else{
+            FileStream file = File.Create(Application.persistentDataPath + "/Data.dat");
             DataObject data = new DataObject();
             return data;
         }

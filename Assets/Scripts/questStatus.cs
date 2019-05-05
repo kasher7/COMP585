@@ -26,7 +26,8 @@ public class questStatus : MonoBehaviour
         exp.text =  "Exp gained: " + expGained;
         //Data update logic
         DataObject myData = new DataObject();
-        DataLogic.LoadGameData(myData);
+        myData = DataLogicNew.Load();
+
         if (questConstants.questType == "Strength"){
             story.text = myData.PostStrengthQuestLine[myData.DayCounter];
             myData.StrengthEXP +=expGained;
@@ -49,7 +50,7 @@ public class questStatus : MonoBehaviour
         myData.DailyQuestCounter += 1;
         myData.QuestAmountCompleted +=1;
         Debug.Log(myData.QuestCompleteLog);
-        DataLogic.SaveGameData(myData);
+        DataLogicNew.Save(myData);
         status.text = "Quest completed";
     }
 

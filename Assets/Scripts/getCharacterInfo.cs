@@ -23,7 +23,7 @@ public class getCharacterInfo : MonoBehaviour
 
     void Start()
     {
-        DataLogic.LoadGameData(myData);
+        myData = DataLogicNew.Load();
         name.text = "Name: " + myData.PlayerName;
         lvl.text = "Level: " + myData.PlayerLevel;
         charisLvl.text= "Charisma Level: " + myData.CharismaLevel;

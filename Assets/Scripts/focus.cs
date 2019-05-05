@@ -28,7 +28,7 @@ public class focus : MonoBehaviour
     
     void Start()
     {
-        DataLogic.LoadGameData(myData);
+        myData = DataLogicNew.Load();
         text.text = " ";
         if (text.text != "Failed"){
             if (questConstants.questType == "Strength"){
