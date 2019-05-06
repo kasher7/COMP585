@@ -78,7 +78,7 @@ public class focus : MonoBehaviour
     {   
         // time runs 100 times faster for testing reason
         // change this back later
-        timeLeftSec -= Time.deltaTime * 100;
+        timeLeftSec -= Time.deltaTime;
         timer += Time.deltaTime;
         
         foreach (Touch touch in Input.touches)
