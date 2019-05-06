@@ -78,11 +78,11 @@ public class resetGameData : MonoBehaviour
             TextAsset postFailureQuestLine = (TextAsset)Resources.Load("QuestText/FailureQuestLinePost");
 
             myData.PreStrengthQuestLine = preStrengthQuestLine.text.Split('#');
-            myData.PreCharismaQuestLine = preIntellectQuestLine.text.Split('#');
-            myData.PreIntellectQuestLine = preCharismaQuestLine.text.Split('#');
+            myData.PreCharismaQuestLine = preCharismaQuestLine.text.Split('#');
+            myData.PreIntellectQuestLine = preIntellectQuestLine.text.Split('#');
             myData.PostStrengthQuestLine = postStrengthQuestLine.text.Split('#');
-            myData.PostCharismaQuestLine = postIntellectQuestLine.text.Split('#');
-            myData.PostIntellectQuestLine = postCharismaQuestLine.text.Split('#');
+            myData.PostCharismaQuestLine = postCharismaQuestLine.text.Split('#');
+            myData.PostIntellectQuestLine = postIntellectQuestLine.text.Split('#');
             myData.FailureQuestLine = postFailureQuestLine.text.Split('#');
 
             //set difficult to defult 1
